@@ -60,7 +60,7 @@ services:
         - traefik.docker.network=simplesai
         - traefik.http.routers.deskcomm-staging.rule=Host(`deskcomm-staging.simplesai.com.br`)
         - traefik.http.routers.deskcomm-staging.entrypoints=websecure
-        - traefik.http.routers.deskcomm-staging.tls.certresolver=letsencrypt
+        - traefik.http.routers.deskcomm-staging.tls.certresolver=letsencryptresolver
         - traefik.http.routers.deskcomm-staging.middlewares=deskcomm-staging-compress
         - traefik.http.services.deskcomm-staging.loadbalancer.server.port=3000
         - traefik.http.middlewares.deskcomm-staging-compress.compress=true
